@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todolist</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+
+
+  <div class="container">
+
+<header class="text-center text-light my-4">
+
+  <h1 class="mb-4">
+   TodoLiSt <span>App</span>
+  </h1>
+
+  <form action="" class="search">
+    
+    <input type="text" class="form-control m-auto" placeholder="search todos here"></form>
+
+
+</header>
+
+
+
+
+<ul class="list-group todos mx-auto text-light ">
+
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    <span>all</span>
+    <i class="far fa-trash-alt delete"></i></li>
+
+
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    <span>sfsgdfg</span>
+    <i class="far fa-trash-alt delete"></i></li>
+
+
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    <span>sdgdgf</span>
+    <i class="far fa-trash-alt delete"></i></li>
+
+
+</ul>
+
+
+<form action="" class="add text-center my-4">
+  
+  <input type="text" class="form-control m-auto" name="add" placeholder="Add a new todo">
+</form>
+
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+
+ 
+  <script src="https://kit.fontawesome.com/3b5b726180.js" crossorigin="anonymous"></script>
+
+  <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Montserrat:wght@400;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+  
+  body{
+  background: #1861e9;
+}
+.container{
+  max-width: 500px;
+}
+
+h1{
+  font-weight: 800;
+  text-transform: none;
+padding: 6px 0px;
+  font-family: 'Lobster Two', cursive;
+
+  background: #477cdd;
+  display: block;
+position: relative;
+z-index: -1;
+}
+
+
+
+input[type=text],
+input[type=text]:focus{
+  color: #fff;
+  border: none;
+  background: rgba(0, 0, 0, 0.233);
+  max-width: 500px;
+  font-weight: 400;
+}
+
+input::-webkit-input-placeholder{
+  color: rgba(204, 204, 204, 0.623) !important;
+  font-weight: 800;
+  text-align: center;
+}
+
+
+
+.todos li{
+  background: #1861e9;
+}
+.delete{
+  cursor: pointer;
+}
+
+h1{
+  display: block;
+  margin-top: 100px;
+}
+
+.filtered {
+  display: none !important;
+
+}
+
+h1 span{
+  font-family: 'Lobster Two', cursive;
+}
+
+  </style>
+
+  <script src="todo.js"></script>
+</body>
+</html>
