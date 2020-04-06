@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
 </head>
-<body>
+<body onload="">
 
 
   <div class="container">
@@ -20,12 +20,12 @@
 <header class="text-center text-light my-4">
 
   <h1 class="mb-4">
-   TodoLiSt <span>App</span>
+  Anamika TodoLiSt <span>App</span>
   </h1>
 
   <form action="" class="search">
     
-    <input type="text" class="form-control m-auto" placeholder="search todos here"></form>
+    <input type="text" autocomplete="off" class="form-control m-auto" placeholder="search todos here"></form>
 
 
 </header>
@@ -35,7 +35,7 @@
 
 <ul class="list-group todos mx-auto text-light ">
 
-  <li class="list-group-item d-flex justify-content-between align-items-center">
+  <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
     <span>all</span>
     <i class="far fa-trash-alt delete"></i></li>
 
@@ -47,7 +47,7 @@
 
   <li class="list-group-item d-flex justify-content-between align-items-center">
     <span>sdgdgf</span>
-    <i class="far fa-trash-alt delete"></i></li>
+    <i class="far fa-trash-alt delete"></i></li> -->
 
 
 </ul>
@@ -79,10 +79,20 @@
 }
   
   body{
-  background: #1861e9;
+  background: rgb(24, 226, 159);
+  background: #6c5ce7;
+  
 }
+
+::-webkit-scrollbar{
+width: 0 !important;
+}
+
+
 .container{
   max-width: 500px;
+  
+
 }
 
 h1{
@@ -91,7 +101,7 @@ h1{
 padding: 6px 0px;
   font-family: 'Lobster Two', cursive;
 
-  background: #477cdd;
+  background: #6c5ce7;
   display: block;
 position: relative;
 z-index: -1;
@@ -109,7 +119,7 @@ input[type=text]:focus{
 }
 
 input::-webkit-input-placeholder{
-  color: rgba(204, 204, 204, 0.623) !important;
+  color: rgba(243, 239, 239, 0.877) !important;
   font-weight: 800;
   text-align: center;
 }
@@ -117,7 +127,7 @@ input::-webkit-input-placeholder{
 
 
 .todos li{
-  background: #1861e9;
+  background: #6c5ce7;
 }
 .delete{
   cursor: pointer;
