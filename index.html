@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Todolist</title>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Todolist</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 </head>
-<body onload="">
+
+<body>
 
 
   <div class="container">
 
-<header class="text-center text-light my-4">
+    <header class="text-center text-light my-4">
 
-  <h1 class="mb-4">
-  Anamika TodoLiSt <span>App</span>
-  </h1>
+      <h1 class="mb-4">
+        <i class="far fa-clipboard mx-1"></i> 
+        Anamika Todo Notes <span></span>
+      </h1>
 
-  <form action="" class="search">
-    
-    <input type="text" autocomplete="off" class="form-control m-auto" placeholder="search todos here"></form>
+      <form action="" class="search">
 
-
-</header>
+        <input type="text" autocomplete="off" class="form-control m-auto" placeholder="search todos here"></form>
 
 
+    </header>
 
 
-<ul class="list-group todos mx-auto text-light ">
 
-  <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
+
+    <ul class="list-group todos mx-auto text-light ">
+
+      <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
     <span>all</span>
     <i class="far fa-trash-alt delete"></i></li>
 
@@ -50,105 +49,110 @@
     <i class="far fa-trash-alt delete"></i></li> -->
 
 
-</ul>
+    </ul>
 
 
-<form action="" class="add text-center my-4">
+    <form action="" class="add text-center my-4">
+
+      <input type="text" class="form-control m-auto" name="add" placeholder="Add a new todo">
+    </form>
+
   
-  <input type="text" class="form-control m-auto" name="add" placeholder="Add a new todo">
-</form>
 
 
+      
   </div>
+
+ 
 
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 
- 
+
   <script src="https://kit.fontawesome.com/3b5b726180.js" crossorigin="anonymous"></script>
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Montserrat:wght@400;800&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&family=Montserrat:wght@400;800&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: capitalize;
+      font-weight: 600;
+    }
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    text-transform: capitalize;
-    font-weight: 600;
-}
-  
-  body{
-  background: rgb(24, 226, 159);
-  background: #6c5ce7;
-  
-}
+    body {
 
-::-webkit-scrollbar{
-width: 0 !important;
-}
+      background: #6c5ce7;
 
+    }
 
-.container{
-  max-width: 500px;
-  
-
-}
-
-h1{
-  font-weight: 800;
-  text-transform: none;
-padding: 6px 0px;
-  font-family: 'Lobster Two', cursive;
-
-  background: #6c5ce7;
-  display: block;
-position: relative;
-z-index: -1;
-}
+    ::-webkit-scrollbar {
+      width: 0 !important;
+    }
 
 
+    .container {
+      max-width: 500px;
 
-input[type=text],
-input[type=text]:focus{
-  color: #fff;
-  border: none;
-  background: rgba(0, 0, 0, 0.233);
-  max-width: 500px;
-  font-weight: 400;
-}
 
-input::-webkit-input-placeholder{
-  color: rgba(243, 239, 239, 0.877) !important;
-  font-weight: 800;
-  text-align: center;
-}
+    }
+
+    h1 {
+      font-weight: 800;
+      text-transform: none;
+      padding: 6px 0px;
+      font-family: 'Lobster Two', cursive;
+
+      background: #6c5ce7;
+      display: block;
+      position: relative;
+      z-index: -1;
+    }
 
 
 
-.todos li{
-  background: #6c5ce7;
-}
-.delete{
-  cursor: pointer;
-}
+    input[type=text],
+    input[type=text]:focus {
+      color: #fff;
+      border: none;
+      background: rgba(0, 0, 0, 0.178);
+      max-width: 500px;
+      font-weight: 400;
+    }
 
-h1{
-  display: block;
-  margin-top: 100px;
-}
+    input::-webkit-input-placeholder {
+      color: rgba(243, 239, 239, 0.877) !important;
+      font-weight: 800;
+      text-align: center;
+    }
 
-.filtered {
-  display: none !important;
 
-}
 
-h1 span{
-  font-family: 'Lobster Two', cursive;
-}
+    .todos li {
+      background: #6c5ce7;
+    }
 
+    .delete {
+      cursor: pointer;
+    }
+
+    h1 {
+      display: block;
+      margin-top: 50px;
+    }
+
+    .filtered {
+      display: none !important;
+
+    }
+
+    h1 span {
+      font-family: 'Lobster Two', cursive;
+    }
   </style>
 
   <script src="todo.js"></script>
 </body>
+
 </html>

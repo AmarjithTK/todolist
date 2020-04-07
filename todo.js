@@ -40,12 +40,14 @@ const AddItem = (string) =>{
 
     Cookies.set(CookieCount,string,{ expires: 35 })
 
+   
+
     CookieIndex++
 
     Cookies.set('cookiepos',CookieIndex,{ expires: 35 })
 
 
-
+   
 
 
 }
@@ -68,6 +70,7 @@ const RetriveItem = ()=>{
 
            if(type=='string')
             generateTemplate(CookieString)
+
            
             
         }
@@ -90,6 +93,7 @@ addform.addEventListener('submit',e=>{
     if(todo.length){
      generateTemplate(todo)
      addform.reset()
+
      AddItem(todo)
    
     }
@@ -111,10 +115,11 @@ list.addEventListener('click',e =>{
     let nodes = Array.from( li.closest('ul').children ); // get array
     let index = nodes.indexOf( li ); 
 
-    RemoveCookie(index)
+
+    RemoveCookie(li.getAttribute('value'))
     
 
-    console.log(index)
+    console.log()
    
    if(e.target.classList.contains('delete'))
 {
@@ -131,9 +136,9 @@ list.addEventListener('click',e =>{
 
 // function to generate template string for the list
 
-const generateTemplate= todo =>{
+const generateTemplate= (todo) =>{
 
-const html = `<li class="list-group-item d-flex justify-content-between align-items-center">
+const html = `<li class="list-group-item d-flex justify-content-between align-items-center" value = "${todo}" >
 <span>${todo}</span>
 <i class="far fa-trash-alt delete"></i></li>`;
 
@@ -225,9 +230,19 @@ window.onload=function onload(){
 
 
 
-const RemoveCookie=(index)=>{
-    const keyword=`array${index}`
-    Cookies.remove(keyword)
+const RemoveCookie=(attribute)=>{
+
+    const loc = Cookies.get('cookiepos')
+
+
+for (let index = 0; index <= loc ; index++) {
+    let cookie = Cookies.get(`array${index}`)
+    if(attribute==cookie)
+    Cookies.remove(`array${index}`)
+    
+}
+   
+    
     
 }
 
